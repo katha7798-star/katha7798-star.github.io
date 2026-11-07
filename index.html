@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sabiha Kalam Katha | Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #faf7ff;
+    color: #302442;
+}
+
+header {
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+}
+
+.logo {
+    color: #9b59b6;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: #302442;
+    margin-left: 20px;
+}
+
+.hero {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #f5e6ff, #fce8f2);
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin: 15px;
+}
+
+.hero h1 span {
+    color: #a052b5;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 13px 28px;
+    background: #9b59b6;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+section {
+    padding: 65px 10%;
+    text-align: center;
+}
+
+h2 {
+    color: #9652ad;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin: 15px auto;
+    max-width: 650px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #ddd;
+    line-height: 1.8;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills span {
+    background: #f0dafa;
+    padding: 12px 22px;
+    border-radius: 20px;
+}
+
+footer {
+    background: #302442;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+@media(max-width:600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 5px;
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Sabiha.</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero" id="home">
+    <p>HELLO, WELCOME TO MY PORTFOLIO</p>
+    <h1>Hi, I'm <span>Sabiha Kalam Katha</span></h1>
+    <p>CSE Student | Future Software Developer</p>
+    <p>Passionate about AI, Web Development and Technology.</p>
+    <a href="#about" class="btn">Explore My Portfolio</a>
+</div>
+
+<section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+        Hello! I'm Sabiha Kalam Katha, a Computer Science
+        and Engineering student. I love learning new
+        technologies and building creative projects.
+        I am always excited to learn and grow.
+    </div>
+</section>
+
+<section id="skills">
+    <h2>My Skills</h2>
+    <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>C++</span>
+        <span>Java</span>
+        <span>Python</span>
+        <span>Web Development</span>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+    <div class="card">
+        <h3>My First Portfolio</h3>
+        <p>A personal website to showcase my skills,
+        interests and projects.</p>
+    </div>
+    <div class="card">
+        <h3>AI Based Projects</h3>
+        <p>Exploring Artificial Intelligence
+        and creative technology solutions.</p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <div class="card">
+        <p>Let's connect and build something amazing!</p>
+        <p>GitHub: katha7798-star</p>
+        <a class="btn"
+        href="https://github.com/katha7798-star">
+        Visit My GitHub
+        </a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Sabiha Kalam Katha | Made with ♡</p>
+</footer>
+
+</body>
+</html>
