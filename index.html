@@ -1,273 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sabiha Kalam Katha | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
+    <title>My Portfolio | Katha</title>
 
-body {
-    font-family: Arial, sans-serif;
-    background: #faf7ff;
-    color: #302442;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-header {
-    padding: 22px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: white;
-}
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #faf8ff;
+            color: #393044;
+            line-height: 1.7;
+        }
 
-.logo {
-    color: #9b59b6;
-    font-size: 23px;
-    font-weight: bold;
-}
+        /* Navigation */
+        header {
+            background: #ffffff;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px #0000000a;
+        }
 
-nav a {
-    text-decoration: none;
-    color: #302442;
-    margin-left: 20px;
-}
+        .logo {
+            font-size: 23px;
+            font-weight: bold;
+            color: #9275bd;
+        }
 
-.hero {
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 30px;
-    background: linear-gradient(135deg, #f5e6ff, #fce8f2);
-}
+        nav a {
+            text-decoration: none;
+            color: #51465f;
+            margin-left: 22px;
+            font-size: 14px;
+        }
 
-.hero h1 {
-    font-size: 42px;
-    margin: 15px;
-}
+        nav a:hover {
+            color: #9876c8;
+        }
 
-.hero h1 span {
-    color: #a052b5;
-}
+        /* Common Sections */
+        section {
+            padding: 75px 10%;
+        }
 
-.hero p {
-    font-size: 18px;
-    line-height: 1.8;
-}
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            color: #8063aa;
+            margin-bottom: 35px;
+        }
 
-.btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 13px 28px;
-    background: #9b59b6;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-}
+        /* Hero */
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            text-align: left;
+        }
 
-section {
-    padding: 65px 10%;
-    text-align: center;
-}
+        .hero-text {
+            max-width: 500px;
+        }
 
-h2 {
-    color: #9652ad;
-    margin-bottom: 25px;
-}
+        .hero-text h1 {
+            font-size: 43px;
+            color: #725493;
+            line-height: 1.3;
+        }
 
-.card {
-    background: white;
-    padding: 25px;
-    margin: 15px auto;
-    max-width: 650px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px #ddd;
-    line-height: 1.8;
-}
+        .hero-text h2 {
+            font-size: 21px;
+            font-weight: 500;
+            margin: 12px 0;
+        }
 
-.skills {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-}
+        .hero-text p {
+            color: #756b7d;
+            margin: 15px 0 25px;
+        }
 
-.skills span {
-    background: #f0dafa;
-    padding: 12px 22px;
-    border-radius: 20px;
-}
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 7px solid #eee5fa;
+            box-shadow: 0 8px 25px #9275bd25;
+        }
 
-footer {
-    background: #302442;
-    color: white;
-    padding: 25px;
-    text-align: center;
-}
+        .btn {
+            display: inline-block;
+            background: #9275bd;
+            color: white;
+            padding: 11px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
 
-@media(max-width:600px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
+        .btn:hover {
+            background: #725493;
+            transform: translateY(-2px);
+        }
 
-    nav a {
-        margin: 5px;
-        font-size: 13px;
-    }
+        /* About */
+        .about {
+            background: #ffffff;
+            text-align: center;
+        }
 
-    .hero h1 {
-        font-size: 30px;
-    }
-}
-    /* Minimal Elegant Purple Theme */
-body {
-    background: #faf8ff;
-    color: #302744;
-    font-family: Arial, sans-serif;
-}
+        .about p {
+            max-width: 750px;
+            margin: auto;
+            color: #756b7d;
+        }
 
-header {
-    background: #ffffff;
-    box-shadow: 0 2px 15px rgba(100, 80, 150, 0.08);
-}
+        /* Skills */
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
 
-nav a {
-    color: #554477;
-    text-decoration: none;
-    margin: 10px;
-}
+        .skill {
+            background: #eee7f8;
+            color: #725493;
+            padding: 12px 23px;
+            border-radius: 25px;
+            font-weight: 500;
+        }
 
-.hero {
-    background: linear-gradient(135deg, #f5f0ff, #ffffff);
-    padding: 100px 20px;
-    text-align: center;
-}
+        /* Projects */
+        .projects {
+            background: #ffffff;
+        }
 
-.hero h1 {
-    color: #7255aa;
-}
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
 
-.btn {
-    background: #9277cc;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 25px;
-    text-decoration: none;
-}
+        .card {
+            background: #faf8ff;
+            padding: 27px;
+            border-radius: 18px;
+            border: 1px solid #eee5fa;
+            transition: 0.3s;
+        }
 
-section {
-    padding: 60px 8%;
-}
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 25px #9275bd20;
+        }
 
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 18px;
-    box-shadow: 0 5px 20px rgba(100, 80, 150, 0.08);
-}
+        .card h3 {
+            color: #8063aa;
+            margin-bottom: 12px;
+        }
 
-#about img {
-    border: 5px solid #eee7ff;
-    box-shadow: 0 5px 20px rgba(100, 80, 150, 0.15);
-}
+        .card p {
+            color: #756b7d;
+            margin-bottom: 12px;
+        }
 
-@media (max-width: 600px) {
-    .hero {
-        padding: 70px 15px;
-    }
+        /* Education */
+        .education {
+            text-align: center;
+        }
 
-    section {
-        padding: 40px 5%;
-    }
-}
-</style>
+        .education-card {
+            max-width: 600px;
+            margin: auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 18px;
+            border: 1px solid #eee5fa;
+        }
+
+        /* Contact */
+        .contact {
+            background: #ffffff;
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 10px 0;
+            color: #756b7d;
+        }
+
+        .contact a {
+            color: #8063aa;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #725493;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0;
+            }
+
+            section {
+                padding: 55px 7%;
+            }
+
+            .hero {
+                text-align: center;
+                flex-direction: column-reverse;
+                gap: 25px;
+            }
+
+            .hero-text h1 {
+                font-size: 34px;
+            }
+
+            .profile-img {
+                width: 190px;
+                height: 190px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-    <div class="logo">Sabiha.</div>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
+    <!-- Navigation -->
+    <header>
+        <div class="logo">My Portfolio</div>
 
-<div class="hero" id="home">
-    <p>HELLO, WELCOME TO MY PORTFOLIO</p>
-    <h1>Hi, I'm <span>Sabiha Kalam Katha</span></h1>
-    <p>CSE Student | Future Software Developer</p>
-    <p>Passionate about AI, Web Development and Technology.</p>
-    <a href="#about" class="btn">Explore My Portfolio</a>
-    <img src="profile.jpg" alt="Sabihа Kalam Katha"
-     style="width:200px; height:200px;
-     object-fit:cover; border-radius:50%;">
-</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-<section id="about">
-    <h2>About Me</h2>
-    <div class="card">
-        Hello! I'm Sabiha Kalam Katha, a Computer Science
-        and Engineering student. I love learning new
-        technologies and building creative projects.
-        I am always excited to learn and grow.
-    </div>
-</section>
+    <!-- Home -->
+    <section class="hero" id="home">
 
-<section id="skills">
-    <h2>My Skills</h2>
-    <div class="skills">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>C++</span>
-        <span>Java</span>
-        <span>Python</span>
-        <span>Web Development</span>
-    </div>
-</section>
+        <div class="hero-text">
+            <h1>Hello, I'm Katha!</h1>
 
-<section id="projects">
-    <h2>My Projects</h2>
-    <div class="card">
-        <h3>My First Portfolio</h3>
-        <p>A personal website to showcase my skills,
-        interests and projects.</p>
-    </div>
-    <div class="card">
-        <h3>AI Based Projects</h3>
-        <p>Exploring Artificial Intelligence
-        and creative technology solutions.</p>
-    </div>
-</section>
+            <h2>Computer Science & Engineering Student</h2>
 
-<section id="contact">
-    <h2>Contact Me</h2>
-    <div class="card">
-        <p>Let's connect and build something amazing!</p>
-        <p>GitHub: katha7798-star</p>
-        <a class="btn"
-        href="https://github.com/katha7798-star">
-        Visit My GitHub
-        </a>
-    </div>
-</section>
+            <p>
+                I am passionate about technology, web development
+                and artificial intelligence. I enjoy learning new
+                things and building creative projects.
+            </p>
 
-<footer>
-    <p>© 2026 Sabiha Kalam Katha | Made with ♡</p>
-</footer>
+            <a href="#contact" class="btn">Contact Me</a>
+        </div>
+
+        <div>
+            <img src="profile.jpg"
+                 alt="My Profile Picture"
+                 class="profile-img">
+        </div>
+
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <p>
+            I am a Computer Science and Engineering student
+            interested in web development, artificial intelligence
+            and software development. I love exploring new
+            technologies and improving my programming skills.
+            My goal is to create useful and innovative digital solutions.
+        </p>
+
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="skills-container">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">C++</div>
+            <div class="skill">Java</div>
+            <div class="skill">Python</div>
+            <div class="skill">React</div>
+            <div class="skill">AI & Machine Learning</div>
+        </div>
+
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+
+        <h2 class="section-title">My Projects</h2>
+
+        <div class="project-grid">
+
+            <div class="card">
+                <h3>OrbitMind AI</h3>
+
+                <p>
+                    Intelligent Productivity & Study Companion
+                </p>
+
+                <p>
+                    An AI-powered platform designed to help
+                    students manage study tasks, organize
+                    learning activities and improve productivity.
+                </p>
+
+                <p>
+                    <strong>Project Type:</strong>
+                    AI & Web Development
+                </p>
+
+                <p>
+                    <strong>Status:</strong>
+                    In Development
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Education -->
+    <section class="education" id="education">
+
+        <h2 class="section-title">Education</h2>
+
+        <div class="education-card">
+            <h3>Bachelor of Science in Computer Science & Engineering</h3>
+
+            <p>Currently pursuing my undergraduate degree.</p>
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+
+        <h2 class="section-title">Contact Me</h2>
+
+        <p>
+            Email:
+            <a href="mailto:your-email@example.com">
+                your-email@example.com
+            </a>
+        </p>
+
+        <p>
+            GitHub:
+            <a href="https://github.com/katha7798-star"
+               target="_blank">
+                github.com/katha7798-star
+            </a>
+        </p>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Katha | Designed with love ♡</p>
+    </footer>
 
 </body>
 </html>
